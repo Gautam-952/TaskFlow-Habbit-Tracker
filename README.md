@@ -8,6 +8,13 @@ The V1 release includes task management, project organization, habit tracking, c
 
 ---
 
+## 📥 Download
+
+Download the latest Windows installer from the
+[Releases](../../releases) page.
+
+**Current version:** v1.0.0
+
 ## ✨ Features
 
 ### 📋 Task Management
