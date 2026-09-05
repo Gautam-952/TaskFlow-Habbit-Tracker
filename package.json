@@ -1,0 +1,43 @@
+{
+  "name": "task-flow-v1",
+  "private": true,
+  "version": "1.0.0",
+  "main": "electron.cjs",
+  "type": "module",
+
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "electron": "electron .",
+    "dist": "npm run build && electron-builder",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+
+  "build": {
+    "appId": "com.taskflow.desktop",
+    "productName": "TaskFlow",
+
+    "files": [
+      "dist/**/*",
+      "electron.cjs",
+      "package.json"
+    ],
+
+    "directories": {
+      "buildResources": "build"
+    },
+
+    "win": {
+      "target": "nsis",
+      "icon": "build/ICON.ico"
+    },
+
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
